@@ -42,7 +42,7 @@ export default function StickyHeadTable({ rows, filter }) {
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              {(filter ==
+              {(filter ===
               "Show the data of top 10 cities which have the highest number of users and their average income"
                 ? onlyCity
                 : columns
@@ -57,7 +57,7 @@ export default function StickyHeadTable({ rows, filter }) {
               .map((row) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    {(filter ==
+                    {(filter ===
                     "Show the data of top 10 cities which have the highest number of users and their average income"
                       ? onlyCity
                       : columns

@@ -12,19 +12,19 @@ function App() {
     let apiCall = "https://wicked-sweatsuit-newt.cyclic.app/";
 
     if (
-      filter ==
+      filter ===
       "Users which have income lower than $5 USD and have a car of brand “BMW” or “Mercedes”"
     )
       apiCall += "api/filter1";
-    else if (filter == "Male Users which have phone price greater than 10,000")
+    else if (filter === "Male Users which have phone price greater than 10,000")
       apiCall += "api/filter2";
     else if (
-      filter ==
+      filter ===
       "Users whose last name starts with “M” and has a quote character length greater than 15 and email includes his/her last name"
     )
       apiCall += "api/filter3";
     else if (
-      filter ==
+      filter ===
       "Users which have a car of brand “BMW”, “Mercedes” or “Audi” and whose email does not include any digit"
     )
       apiCall += "api/filter4";
@@ -39,7 +39,7 @@ function App() {
   return (
     <Container>
       <Header filter={filter} setFilter={setFilter} />
-      {filter == "" ? (
+      {filter === "" ? (
         <h2>Choose a filter</h2>
       ) : (
         <Table rows={data} filter={filter} />
