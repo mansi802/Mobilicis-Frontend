@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import { useEffect, useState } from "react";
 import "../index.css";
 
 function Header({ filter, setFilter }) {
